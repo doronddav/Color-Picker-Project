@@ -1,0 +1,124 @@
+body {
+  background-color: grey;
+}
+.headline {
+  text-align: center;
+  font-size: 3.7rem;
+}
+.main-box {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  width: 31rem;
+  height: 16rem;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+
+  margin: auto;
+}
+.picker-box {
+  width: 16rem;
+  height: 15rem;
+
+  display: flex;
+  flex-direction: column;
+}
+div {
+  p {
+    text-align: center;
+    font-size: 2rem;
+  }
+}
+.right-box {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2.3rem;
+}
+.display-box {
+  background-color: black;
+  height: 6rem;
+  width: 6rem;
+  margin-left: 2.2rem;
+  top: 1rem;
+
+  border-radius: 100px;
+}
+.value {
+  display: flex;
+
+  width: 10rem;
+  height: 5rem;
+  margin: 1rem 0;
+  p {
+    color: white;
+    font-size: 1.3rem;
+    margin-left: 2rem;
+  }
+}
+.my-colors {
+  border: 1px solid black;
+
+  width: 31rem;
+  height: 6rem;
+  margin: auto;
+}
+.save {
+  text-align: -webkit-center;
+
+  border-radius: 1px 70px;
+  input {
+    width: 7rem;
+    text-align: center;
+    border-radius: 1rem;
+    color: black;
+    background-color: white;
+  }
+}
+.btn {
+  border-radius: 1rem;
+  background: rgba(0, 0, 0, 0.377);
+  color: white;
+  width: 3rem;
+  height: 1.3rem;
+  margin: auto;
+}
+
+.my-colors {
+  display: flex;
+  flex-direction: row;
+  border: 0.1rem solid black;
+  border-radius: 1rem;
+  height: 4.8rem;
+  .my-color {
+    display: flex;
+    div {
+      display: flex;
+      border-radius: 1rem;
+    }
+  }
+}
+.allColorname {
+  font-size: 1rem;
+}
+.chosen {
+  width: 6.2rem;
+}
+
+input {
+  width: 15rem;
+  margin-left: 0.3rem;
+}
+.red {
+  color: red;
+}
+.green {
+  color: green;
+}
+.blue {
+  color: blue;
+}
+p {
+  margin: 0.5rem;
+}

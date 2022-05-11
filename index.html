@@ -1,0 +1,78 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="/style.css" />
+    </head>
+    <body class="checkColor">
+        
+            <p class="headline">COLOR PICKER</p>
+            <div class="main-box">
+        <div class="picker-box">
+        <p class="red">Red</p>
+        <input class="red" type="range" min="0" max="255" step="1" id="red" />
+        
+        <p class="green">Green</p>
+        <input class="green" type="range" min="0" max="255" step="1" id="green" />
+        
+        <p class="blue">blue</p>
+        <input class="blue" type="range" min="0" max="255" step="1" id="blue" />
+        
+        </div>
+
+
+        <div class="right-box">
+            <div class="display-box" id="display"> 
+            </div>
+
+            <div class="value">
+              
+                <p class="rgb"></p>
+            </div>
+            <div class="save">
+              
+                <input class="btn" type="text" id="colorName" name="lname" placeholder=" Write Color-Name" >
+                <input type="submit" value="Save color" id="submit">
+               
+                 </div>  
+            </div>
+         </div>
+  
+        <div class="my-colors">
+        
+        
+        
+            <div  id="user-swatches" class="my-color">
+            
+                <div class="chosen" id="first">
+                
+                    <button  class="btn" id="clear1">Clear</button>
+                    <p id="colorname1" class="allColorname"></p>
+                </div>
+                <div class="chosen" id="second">
+                        <button  class="btn" id="clear2">Clear</button>
+                         <p id="colorname2" class="allColorname"></p>
+                </div>
+                <div class="chosen" id="third">
+                        <button  class="btn" id="clear3">Clear</button>
+                           <p id="colorname3" class="allColorname"></p>
+                </div>
+                <div class="chosen" id="fourth">
+                        <button  class="btn" id="clear4">Clear</button>
+                           <p id="colorname4" class="allColorname"></p>
+                </div>
+                <div class="chosen" id="fifth">
+                        <button  class="btn" id="clear5">Clear</button>
+                           <p id="colorname5" class="allColorname"></p>
+                </div>
+                </div>
+        </div>
+        
+        </div>
+    
+        <script src="/script.js"></script>
+    </body>
+    </html>
