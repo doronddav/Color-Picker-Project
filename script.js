@@ -54,6 +54,34 @@ const colorDiv = function (color) {
   outputValue(r, g, b);
 };
 
+let clear = function (i) {
+  boxSavedColor[i].style.backgroundColor = "grey";
+  savedColor[i] = false;
+};
+function RGBToHex(r = 0, g = 0, b = 0) {
+  // clamp and convert to hex
+  let hr = Math.max(0, Math.min(255, Math.round(r))).toString(16);
+  let hg = Math.max(0, Math.min(255, Math.round(g))).toString(16);
+  let hb = Math.max(0, Math.min(255, Math.round(b))).toString(16);
+  return (
+    "#" +
+    (hr.length < 2 ? "0" : "") +
+    hr +
+    (hg.length < 2 ? "0" : "") +
+    hg +
+    (hb.length < 2 ? "0" : "") +
+    hb
+  );
+}
+
+const outputValue = (r, g, b) => {
+  let hex = document.querySelector(".hex");
+  let rgb = document.querySelector(".rgb");
+  rgb.textContent = `(${r},${g},${b})`;
+  hex.textContent = RGBToHex(r, g, b);
+  console.log(RGBToHex(r, g, b));
+};
+
 const savingColor = function () {
   for (let i = 0; i < 5; i++) {
     console.log(savedColor[i]);
@@ -61,26 +89,20 @@ const savingColor = function () {
       boxSavedColor[i].style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
       if (r < 100 || g < 100 || b < 100) {
         colorSavedName[i].style.color = "white";
-        colorSavedName[i].innerHTML = colorName.value;
+        if (colorName.value.length == 0)
+          colorSavedName[i].innerText = RGBToHex(r, g, b);
+        else colorSavedName[i].innerText = colorName.value;
       } else {
         colorSavedName[i].style.color = "black";
-        colorSavedName[i].innerHTML = colorName.value;
+        if (colorName.value.length == 0) {
+          colorSavedName[i].innerText = RGBToHex(r, g, b);
+        } else colorSavedName[i].innerText = colorName.value;
       }
       savedColor[i] = true;
+      colorName.value = "";
       break;
     }
   }
-};
-
-let clear = function (i) {
-  boxSavedColor[i].style.backgroundColor = "grey";
-  savedColor[i] = false;
-};
-const outputValue = (r, g, b) => {
-  let hex = document.querySelector(".hex");
-  let rgb = document.querySelector(".rgb");
-  rgb.textContent = `(${r},${g},${b})`;
-  hex.textContent = rgbToHex(r, g, b);
 };
 
 submit.addEventListener("click", () => savingColor());

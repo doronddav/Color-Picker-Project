@@ -51,6 +51,7 @@ div {
   width: 10rem;
   height: 5rem;
   margin: 1rem 0;
+  flex-direction: column;
   p {
     color: white;
     font-size: 1.3rem;
@@ -101,6 +102,8 @@ div {
 }
 .allColorname {
   font-size: 1rem;
+  position: relative;
+  right: 1rem;
 }
 .chosen {
   width: 6.2rem;

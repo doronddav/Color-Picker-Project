@@ -67,6 +67,10 @@ div p {
   width: 10rem;
   height: 5rem;
   margin: 1rem 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .value p {
@@ -132,6 +136,8 @@ div p {
 
 .allColorname {
   font-size: 1rem;
+  position: relative;
+  right: 1rem;
 }
 
 .chosen {
